@@ -22,8 +22,9 @@ public class BoidFlocking : MonoBehaviour
 				}
 				else if (speed < controller.minVelocity)
 				{
-					GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity.normalized * controller.minVelocity;
+					//GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity.normalized * controller.minVelocity;
 				}
+                
 			}
 			float waitTime = Random.Range(0.3f, 0.5f);
 			yield return new WaitForSeconds(waitTime);
@@ -36,10 +37,26 @@ public class BoidFlocking : MonoBehaviour
 		randomize.Normalize();
 		randomize *= controller.randomness;
 
-		Vector3 center = controller.flockCenter - transform.localPosition;
-		Vector3 velocity = controller.flockVelocity - GetComponent<Rigidbody>().velocity;
+        //Vector3 center = controller.flockCenter - transform.localPosition;
+        //Vector3 velocity = controller.flockVelocity - GetComponent<Rigidbody>().velocity;
+        Vector3 center = Vector3.zero;
+        Vector3 velocity = Vector3.zero;
 		Vector3 follow = controller.target.localPosition - transform.localPosition;
 
-		return (center + velocity + follow * 2 + randomize);
+        //return (center + velocity + follow * 2 + randomize); //What is the 2 for?
+        //Avoid collision into leader
+        //print("Follow magnitude" + follow.magnitude + " Velocity " + GetComponent<Rigidbody>().velocity);
+        if (follow.magnitude < 10f)
+        {
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+            GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            //print("Its happening" + GetComponent<Rigidbody>().velocity);
+            return Vector3.zero;
+        }
+        else
+        {
+            print("Its happening" + GetComponent<Rigidbody>().velocity);
+            return follow;
+        } 
 	}
 }
