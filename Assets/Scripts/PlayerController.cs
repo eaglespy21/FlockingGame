@@ -26,4 +26,10 @@ public class PlayerController : MonoBehaviour {
         controller.Move(transform.forward * speedY);
         //transform.Translate(0, 0, speedY);
 	}
+
+	void OnTriggerEnter(Collider other) {
+		if (other.tag == "apple") {
+		
+		}
+	}
 }
