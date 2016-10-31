@@ -19,15 +19,17 @@ public class PlayerController_S : MonoBehaviour {
         //print("Speed"+speedY);
         speedZ = Input.GetAxis("Pitch") * Time.deltaTime * speedCZ;
         //transform.Rotate(speedZ, 0, 0);
-        transform.Translate(speedX, speedZ, 0);
+        transform.Translate(speedX, 0, -speedZ);
         //moveDirection = new Vector3(speedX, 0, speedY);
         //moveDirection = transform.TransformDirection(moveDirection);
         //moveDirection *= speedCX;
         //controller.Move(moveDirection * Time.deltaTime);
         //controller.Move(transform.forward * speedY);
+        //moveDirection = new Vector3(1 * speedX, 1 * speedZ, 0);
+        //controller.Move(moveDirection);
         if (Input.GetKeyDown(KeyCode.G))
         {
-            GetComponent<Rigidbody>().velocity = transform.forward * speedCY;
+            GetComponent<Rigidbody>().velocity = Vector3.forward * speedCY;
             //print(GetComponent<Rigidbody>().velocity);
         }
         //transform.Translate(0, 0, speedY);
