@@ -7,8 +7,9 @@ public class PlayerController_S : MonoBehaviour {
     public Vector3 moveDirection = Vector3.zero;
 	// Use this for initialization
 	void Start () {
-	
-	}
+        GetComponent<Rigidbody>().velocity = Vector3.forward * speedCY;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
