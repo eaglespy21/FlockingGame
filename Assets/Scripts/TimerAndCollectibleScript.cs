@@ -53,10 +53,10 @@ public class TimerAndCollectibleScript : MonoBehaviour {
     }*/
     void OnTriggerEnter(Collider col)
     {
-        print("Collider trigger entered" + col);
+        //print("Collider trigger entered" + col);
 		if(col.CompareTag("apple"))
         {
-            print("Apple skin");
+            //print("Apple skin");
 			lives++;
 			if (lives > 3) {
 				lives = 3;
@@ -66,7 +66,7 @@ public class TimerAndCollectibleScript : MonoBehaviour {
         }
 		else if(col.CompareTag("tree")||col.CompareTag("house")) //replace with tag harm which contains all objects that cause harm 
         {
-            print("Found palm tree");
+            //print("Found palm tree");
             GetComponent<Respawn>().respawnPlayerFunction();
 			lives--;
         }

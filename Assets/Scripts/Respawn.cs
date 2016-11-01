@@ -18,7 +18,7 @@ public class Respawn : MonoBehaviour {
 
     public void respawnPlayerFunction()
     {
-        print("RespawnFunction called");
+        //print("RespawnFunction called");
         Player.transform.position = SpawnPoint.transform.position;
 		PlayerCamera.transform.position = SpawnPoint.transform.position;
     }
