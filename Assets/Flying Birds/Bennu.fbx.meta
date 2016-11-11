@@ -1,42 +1,40 @@
 fileFormatVersion: 2
-guid: 7ebac5696286bc642b0091b1257f5d54
+guid: 64a359ad61013834fa258c608e7f2bb8
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Eagle
-    100004: head
-    100006: left_shoulder
-    100008: left_Wing1
-    100010: left_Wing2
-    100012: neck
-    100014: right_shoulder
-    100016: right_Wing1
-    100018: right_Wing2
-    100020: root
-    100022: spine1
-    100024: spine2
-    100026: spine3
+    100002: Bennu
+    100004: Head
+    100006: Jnt_Bennu_Root
+    100008: Jnt_Elbow_E_L
+    100010: Jnt_Elbow_E_R
+    100012: Jnt_Elbow_L
+    100014: Jnt_Elbow_R
+    100016: Jnt_Feet
+    100018: Jnt_Legs
+    100020: Jnt_Shoulder_L
+    100022: Jnt_Shoulder_R
+    100024: Jnt_Tail
     400000: //RootNode
-    400002: Eagle
-    400004: head
-    400006: left_shoulder
-    400008: left_Wing1
-    400010: left_Wing2
-    400012: neck
-    400014: right_shoulder
-    400016: right_Wing1
-    400018: right_Wing2
-    400020: root
-    400022: spine1
-    400024: spine2
-    400026: spine3
-    4300000: Eagle
-    7400000: EagleWingsBeat_ANIM
-    7400002: EagleFly_ANIM
+    400002: Bennu
+    400004: Head
+    400006: Jnt_Bennu_Root
+    400008: Jnt_Elbow_E_L
+    400010: Jnt_Elbow_E_R
+    400012: Jnt_Elbow_L
+    400014: Jnt_Elbow_R
+    400016: Jnt_Feet
+    400018: Jnt_Legs
+    400020: Jnt_Shoulder_L
+    400022: Jnt_Shoulder_R
+    400024: Jnt_Tail
+    4300000: Bennu
+    7400000: BennuBeatWings_ANIM
+    7400002: BennuFly_ANIM
     9500000: //RootNode
     11100000: //RootNode
-    13700000: Eagle
+    13700000: Bennu
   materials:
     importMaterials: 1
     materialName: 0
@@ -59,7 +57,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: EagleWingsBeat_ANIM
+      name: BennuBeatWings_ANIM
       takeName: Take 001
       firstFrame: 1
       lastFrame: 25
@@ -85,37 +83,35 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: Eagle
+      - path: Bennu
         weight: 1
-      - path: root
+      - path: Jnt_Bennu_Root
         weight: 1
-      - path: root/left_shoulder
+      - path: Jnt_Bennu_Root/Head
         weight: 1
-      - path: root/left_shoulder/left_Wing1
+      - path: Jnt_Bennu_Root/Jnt_Legs
         weight: 1
-      - path: root/left_shoulder/left_Wing1/left_Wing2
+      - path: Jnt_Bennu_Root/Jnt_Legs/Jnt_Feet
         weight: 1
-      - path: root/right_shoulder
+      - path: Jnt_Bennu_Root/Jnt_Shoulder_L
         weight: 1
-      - path: root/right_shoulder/right_Wing1
+      - path: Jnt_Bennu_Root/Jnt_Shoulder_L/Jnt_Elbow_L
         weight: 1
-      - path: root/right_shoulder/right_Wing1/right_Wing2
+      - path: Jnt_Bennu_Root/Jnt_Shoulder_L/Jnt_Elbow_L/Jnt_Elbow_E_L
         weight: 1
-      - path: root/spine1
+      - path: Jnt_Bennu_Root/Jnt_Shoulder_R
         weight: 1
-      - path: root/spine1/neck
+      - path: Jnt_Bennu_Root/Jnt_Shoulder_R/Jnt_Elbow_R
         weight: 1
-      - path: root/spine1/neck/head
+      - path: Jnt_Bennu_Root/Jnt_Shoulder_R/Jnt_Elbow_R/Jnt_Elbow_E_R
         weight: 1
-      - path: root/spine1/spine2
-        weight: 1
-      - path: root/spine1/spine2/spine3
+      - path: Jnt_Bennu_Root/Jnt_Tail
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: EagleFly_ANIM
+      name: BennuFly_ANIM
       takeName: Take 001
       firstFrame: 26
       lastFrame: 50
@@ -141,31 +137,29 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: Eagle
+      - path: Bennu
         weight: 1
-      - path: root
+      - path: Jnt_Bennu_Root
         weight: 1
-      - path: root/left_shoulder
+      - path: Jnt_Bennu_Root/Head
         weight: 1
-      - path: root/left_shoulder/left_Wing1
+      - path: Jnt_Bennu_Root/Jnt_Legs
         weight: 1
-      - path: root/left_shoulder/left_Wing1/left_Wing2
+      - path: Jnt_Bennu_Root/Jnt_Legs/Jnt_Feet
         weight: 1
-      - path: root/right_shoulder
+      - path: Jnt_Bennu_Root/Jnt_Shoulder_L
         weight: 1
-      - path: root/right_shoulder/right_Wing1
+      - path: Jnt_Bennu_Root/Jnt_Shoulder_L/Jnt_Elbow_L
         weight: 1
-      - path: root/right_shoulder/right_Wing1/right_Wing2
+      - path: Jnt_Bennu_Root/Jnt_Shoulder_L/Jnt_Elbow_L/Jnt_Elbow_E_L
         weight: 1
-      - path: root/spine1
+      - path: Jnt_Bennu_Root/Jnt_Shoulder_R
         weight: 1
-      - path: root/spine1/neck
+      - path: Jnt_Bennu_Root/Jnt_Shoulder_R/Jnt_Elbow_R
         weight: 1
-      - path: root/spine1/neck/head
+      - path: Jnt_Bennu_Root/Jnt_Shoulder_R/Jnt_Elbow_R/Jnt_Elbow_E_R
         weight: 1
-      - path: root/spine1/spine2
-        weight: 1
-      - path: root/spine1/spine2/spine3
+      - path: Jnt_Bennu_Root/Jnt_Tail
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}

@@ -1,42 +1,42 @@
 fileFormatVersion: 2
-guid: 7ebac5696286bc642b0091b1257f5d54
+guid: 07d56d743a23dcf45ae6ac29b65f7e16
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Eagle
+    100002: Falcon
     100004: head
     100006: left_shoulder
-    100008: left_Wing1
-    100010: left_Wing2
+    100008: left_Wing
+    100010: left_Wing 1
     100012: neck
     100014: right_shoulder
-    100016: right_Wing1
-    100018: right_Wing2
+    100016: right_Wing
+    100018: right_Wing 1
     100020: root
-    100022: spine1
+    100022: spine
     100024: spine2
     100026: spine3
     400000: //RootNode
-    400002: Eagle
+    400002: Falcon
     400004: head
     400006: left_shoulder
-    400008: left_Wing1
-    400010: left_Wing2
+    400008: left_Wing
+    400010: left_Wing 1
     400012: neck
     400014: right_shoulder
-    400016: right_Wing1
-    400018: right_Wing2
+    400016: right_Wing
+    400018: right_Wing 1
     400020: root
-    400022: spine1
+    400022: spine
     400024: spine2
     400026: spine3
-    4300000: Eagle
-    7400000: EagleWingsBeat_ANIM
-    7400002: EagleFly_ANIM
+    4300000: Falcon
+    7400000: FalconWingsBeat_ANIM
+    7400002: FalconFly_ANIM
     9500000: //RootNode
     11100000: //RootNode
-    13700000: Eagle
+    13700000: Falcon
   materials:
     importMaterials: 1
     materialName: 0
@@ -59,7 +59,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: EagleWingsBeat_ANIM
+      name: FalconWingsBeat_ANIM
       takeName: Take 001
       firstFrame: 1
       lastFrame: 25
@@ -85,37 +85,37 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: Eagle
+      - path: Falcon
         weight: 1
       - path: root
         weight: 1
       - path: root/left_shoulder
         weight: 1
-      - path: root/left_shoulder/left_Wing1
+      - path: root/left_shoulder/left_Wing
         weight: 1
-      - path: root/left_shoulder/left_Wing1/left_Wing2
+      - path: root/left_shoulder/left_Wing/left_Wing 1
         weight: 1
       - path: root/right_shoulder
         weight: 1
-      - path: root/right_shoulder/right_Wing1
+      - path: root/right_shoulder/right_Wing
         weight: 1
-      - path: root/right_shoulder/right_Wing1/right_Wing2
+      - path: root/right_shoulder/right_Wing/right_Wing 1
         weight: 1
-      - path: root/spine1
+      - path: root/spine
         weight: 1
-      - path: root/spine1/neck
+      - path: root/spine/neck
         weight: 1
-      - path: root/spine1/neck/head
+      - path: root/spine/neck/head
         weight: 1
-      - path: root/spine1/spine2
+      - path: root/spine/spine2
         weight: 1
-      - path: root/spine1/spine2/spine3
+      - path: root/spine/spine2/spine3
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: EagleFly_ANIM
+      name: FalconFly_ANIM
       takeName: Take 001
       firstFrame: 26
       lastFrame: 50
@@ -141,31 +141,31 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: Eagle
+      - path: Falcon
         weight: 1
       - path: root
         weight: 1
       - path: root/left_shoulder
         weight: 1
-      - path: root/left_shoulder/left_Wing1
+      - path: root/left_shoulder/left_Wing
         weight: 1
-      - path: root/left_shoulder/left_Wing1/left_Wing2
+      - path: root/left_shoulder/left_Wing/left_Wing 1
         weight: 1
       - path: root/right_shoulder
         weight: 1
-      - path: root/right_shoulder/right_Wing1
+      - path: root/right_shoulder/right_Wing
         weight: 1
-      - path: root/right_shoulder/right_Wing1/right_Wing2
+      - path: root/right_shoulder/right_Wing/right_Wing 1
         weight: 1
-      - path: root/spine1
+      - path: root/spine
         weight: 1
-      - path: root/spine1/neck
+      - path: root/spine/neck
         weight: 1
-      - path: root/spine1/neck/head
+      - path: root/spine/neck/head
         weight: 1
-      - path: root/spine1/spine2
+      - path: root/spine/spine2
         weight: 1
-      - path: root/spine1/spine2/spine3
+      - path: root/spine/spine2/spine3
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}

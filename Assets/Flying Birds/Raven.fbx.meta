@@ -1,42 +1,42 @@
 fileFormatVersion: 2
-guid: 7ebac5696286bc642b0091b1257f5d54
+guid: aafda69766bc96c46822da96e543394f
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Eagle
-    100004: head
-    100006: left_shoulder
-    100008: left_Wing1
-    100010: left_Wing2
-    100012: neck
-    100014: right_shoulder
-    100016: right_Wing1
-    100018: right_Wing2
-    100020: root
+    100000: head
+    100002: Jnt_Raven_Root
+    100004: left_shoulder
+    100006: left_Wing1
+    100008: left_Wing2
+    100010: neck
+    100012: //RootNode
+    100014: Raven
+    100016: right_shoulder
+    100018: right_Wing1
+    100020: right_Wing2
     100022: spine1
     100024: spine2
     100026: spine3
-    400000: //RootNode
-    400002: Eagle
-    400004: head
-    400006: left_shoulder
-    400008: left_Wing1
-    400010: left_Wing2
-    400012: neck
-    400014: right_shoulder
-    400016: right_Wing1
-    400018: right_Wing2
-    400020: root
+    400000: head
+    400002: Jnt_Raven_Root
+    400004: left_shoulder
+    400006: left_Wing1
+    400008: left_Wing2
+    400010: neck
+    400012: //RootNode
+    400014: Raven
+    400016: right_shoulder
+    400018: right_Wing1
+    400020: right_Wing2
     400022: spine1
     400024: spine2
     400026: spine3
-    4300000: Eagle
-    7400000: EagleWingsBeat_ANIM
-    7400002: EagleFly_ANIM
+    4300000: Raven
+    7400000: RavenWingsBeat_ANIM
+    7400002: RavenFly_ANIM
     9500000: //RootNode
     11100000: //RootNode
-    13700000: Eagle
+    13700000: Raven
   materials:
     importMaterials: 1
     materialName: 0
@@ -59,7 +59,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: EagleWingsBeat_ANIM
+      name: RavenWingsBeat_ANIM
       takeName: Take 001
       firstFrame: 1
       lastFrame: 25
@@ -85,37 +85,37 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: Eagle
+      - path: Jnt_Raven_Root
         weight: 1
-      - path: root
+      - path: Jnt_Raven_Root/left_shoulder
         weight: 1
-      - path: root/left_shoulder
+      - path: Jnt_Raven_Root/left_shoulder/left_Wing1
         weight: 1
-      - path: root/left_shoulder/left_Wing1
+      - path: Jnt_Raven_Root/left_shoulder/left_Wing1/left_Wing2
         weight: 1
-      - path: root/left_shoulder/left_Wing1/left_Wing2
+      - path: Jnt_Raven_Root/right_shoulder
         weight: 1
-      - path: root/right_shoulder
+      - path: Jnt_Raven_Root/right_shoulder/right_Wing1
         weight: 1
-      - path: root/right_shoulder/right_Wing1
+      - path: Jnt_Raven_Root/right_shoulder/right_Wing1/right_Wing2
         weight: 1
-      - path: root/right_shoulder/right_Wing1/right_Wing2
+      - path: Jnt_Raven_Root/spine1
         weight: 1
-      - path: root/spine1
+      - path: Jnt_Raven_Root/spine1/neck
         weight: 1
-      - path: root/spine1/neck
+      - path: Jnt_Raven_Root/spine1/neck/head
         weight: 1
-      - path: root/spine1/neck/head
+      - path: Jnt_Raven_Root/spine1/spine2
         weight: 1
-      - path: root/spine1/spine2
+      - path: Jnt_Raven_Root/spine1/spine2/spine3
         weight: 1
-      - path: root/spine1/spine2/spine3
+      - path: Raven
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: EagleFly_ANIM
+      name: RavenFly_ANIM
       takeName: Take 001
       firstFrame: 26
       lastFrame: 50
@@ -141,31 +141,31 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: Eagle
+      - path: Jnt_Raven_Root
         weight: 1
-      - path: root
+      - path: Jnt_Raven_Root/left_shoulder
         weight: 1
-      - path: root/left_shoulder
+      - path: Jnt_Raven_Root/left_shoulder/left_Wing1
         weight: 1
-      - path: root/left_shoulder/left_Wing1
+      - path: Jnt_Raven_Root/left_shoulder/left_Wing1/left_Wing2
         weight: 1
-      - path: root/left_shoulder/left_Wing1/left_Wing2
+      - path: Jnt_Raven_Root/right_shoulder
         weight: 1
-      - path: root/right_shoulder
+      - path: Jnt_Raven_Root/right_shoulder/right_Wing1
         weight: 1
-      - path: root/right_shoulder/right_Wing1
+      - path: Jnt_Raven_Root/right_shoulder/right_Wing1/right_Wing2
         weight: 1
-      - path: root/right_shoulder/right_Wing1/right_Wing2
+      - path: Jnt_Raven_Root/spine1
         weight: 1
-      - path: root/spine1
+      - path: Jnt_Raven_Root/spine1/neck
         weight: 1
-      - path: root/spine1/neck
+      - path: Jnt_Raven_Root/spine1/neck/head
         weight: 1
-      - path: root/spine1/neck/head
+      - path: Jnt_Raven_Root/spine1/spine2
         weight: 1
-      - path: root/spine1/spine2
+      - path: Jnt_Raven_Root/spine1/spine2/spine3
         weight: 1
-      - path: root/spine1/spine2/spine3
+      - path: Raven
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}

@@ -1,42 +1,40 @@
 fileFormatVersion: 2
-guid: 7ebac5696286bc642b0091b1257f5d54
+guid: 4b95111ceb8185449b543feb5c345d3b
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Eagle
-    100004: head
-    100006: left_shoulder
-    100008: left_Wing1
-    100010: left_Wing2
-    100012: neck
-    100014: right_shoulder
-    100016: right_Wing1
-    100018: right_Wing2
-    100020: root
-    100022: spine1
-    100024: spine2
-    100026: spine3
-    400000: //RootNode
-    400002: Eagle
-    400004: head
-    400006: left_shoulder
-    400008: left_Wing1
-    400010: left_Wing2
-    400012: neck
-    400014: right_shoulder
-    400016: right_Wing1
-    400018: right_Wing2
-    400020: root
-    400022: spine1
-    400024: spine2
-    400026: spine3
-    4300000: Eagle
-    7400000: EagleWingsBeat_ANIM
-    7400002: EagleFly_ANIM
+    100000: Jnt_Beak
+    100002: Jnt_Head
+    100004: Jnt_Seagull_Root
+    100006: Jnt_Wing_1_L
+    100008: Jnt_Wing_1_R
+    100010: Jnt_Wing_2_L
+    100012: Jnt_Wing_2_R
+    100014: Jnt_Wing_3_L
+    100016: Jnt_Wing_3_R
+    100018: Jnt_Wing_4_L
+    100020: Jnt_Wing_4_R
+    100022: //RootNode
+    100024: Seagull
+    400000: Jnt_Beak
+    400002: Jnt_Head
+    400004: Jnt_Seagull_Root
+    400006: Jnt_Wing_1_L
+    400008: Jnt_Wing_1_R
+    400010: Jnt_Wing_2_L
+    400012: Jnt_Wing_2_R
+    400014: Jnt_Wing_3_L
+    400016: Jnt_Wing_3_R
+    400018: Jnt_Wing_4_L
+    400020: Jnt_Wing_4_R
+    400022: //RootNode
+    400024: Seagull
+    4300000: Seagull
+    7400000: SeagullWingsBeat_ANIM
+    7400002: SeagullFly_ANIM
     9500000: //RootNode
     11100000: //RootNode
-    13700000: Eagle
+    13700000: Seagull
   materials:
     importMaterials: 1
     materialName: 0
@@ -59,11 +57,11 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: EagleWingsBeat_ANIM
+      name: SeagullWingsBeat_ANIM
       takeName: Take 001
       firstFrame: 1
       lastFrame: 25
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
@@ -85,37 +83,35 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: Eagle
+      - path: Jnt_Seagull_Root
         weight: 1
-      - path: root
+      - path: Jnt_Seagull_Root/Jnt_Head
         weight: 1
-      - path: root/left_shoulder
+      - path: Jnt_Seagull_Root/Jnt_Head/Jnt_Beak
         weight: 1
-      - path: root/left_shoulder/left_Wing1
+      - path: Jnt_Seagull_Root/Jnt_Wing_1_L
         weight: 1
-      - path: root/left_shoulder/left_Wing1/left_Wing2
+      - path: Jnt_Seagull_Root/Jnt_Wing_1_L/Jnt_Wing_2_L
         weight: 1
-      - path: root/right_shoulder
+      - path: Jnt_Seagull_Root/Jnt_Wing_1_L/Jnt_Wing_2_L/Jnt_Wing_3_L
         weight: 1
-      - path: root/right_shoulder/right_Wing1
+      - path: Jnt_Seagull_Root/Jnt_Wing_1_L/Jnt_Wing_2_L/Jnt_Wing_3_L/Jnt_Wing_4_L
         weight: 1
-      - path: root/right_shoulder/right_Wing1/right_Wing2
+      - path: Jnt_Seagull_Root/Jnt_Wing_1_R
         weight: 1
-      - path: root/spine1
+      - path: Jnt_Seagull_Root/Jnt_Wing_1_R/Jnt_Wing_2_R
         weight: 1
-      - path: root/spine1/neck
+      - path: Jnt_Seagull_Root/Jnt_Wing_1_R/Jnt_Wing_2_R/Jnt_Wing_3_R
         weight: 1
-      - path: root/spine1/neck/head
+      - path: Jnt_Seagull_Root/Jnt_Wing_1_R/Jnt_Wing_2_R/Jnt_Wing_3_R/Jnt_Wing_4_R
         weight: 1
-      - path: root/spine1/spine2
-        weight: 1
-      - path: root/spine1/spine2/spine3
+      - path: Seagull
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: EagleFly_ANIM
+      name: SeagullFly_ANIM
       takeName: Take 001
       firstFrame: 26
       lastFrame: 50
@@ -141,31 +137,29 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: Eagle
+      - path: Jnt_Seagull_Root
         weight: 1
-      - path: root
+      - path: Jnt_Seagull_Root/Jnt_Head
         weight: 1
-      - path: root/left_shoulder
+      - path: Jnt_Seagull_Root/Jnt_Head/Jnt_Beak
         weight: 1
-      - path: root/left_shoulder/left_Wing1
+      - path: Jnt_Seagull_Root/Jnt_Wing_1_L
         weight: 1
-      - path: root/left_shoulder/left_Wing1/left_Wing2
+      - path: Jnt_Seagull_Root/Jnt_Wing_1_L/Jnt_Wing_2_L
         weight: 1
-      - path: root/right_shoulder
+      - path: Jnt_Seagull_Root/Jnt_Wing_1_L/Jnt_Wing_2_L/Jnt_Wing_3_L
         weight: 1
-      - path: root/right_shoulder/right_Wing1
+      - path: Jnt_Seagull_Root/Jnt_Wing_1_L/Jnt_Wing_2_L/Jnt_Wing_3_L/Jnt_Wing_4_L
         weight: 1
-      - path: root/right_shoulder/right_Wing1/right_Wing2
+      - path: Jnt_Seagull_Root/Jnt_Wing_1_R
         weight: 1
-      - path: root/spine1
+      - path: Jnt_Seagull_Root/Jnt_Wing_1_R/Jnt_Wing_2_R
         weight: 1
-      - path: root/spine1/neck
+      - path: Jnt_Seagull_Root/Jnt_Wing_1_R/Jnt_Wing_2_R/Jnt_Wing_3_R
         weight: 1
-      - path: root/spine1/neck/head
+      - path: Jnt_Seagull_Root/Jnt_Wing_1_R/Jnt_Wing_2_R/Jnt_Wing_3_R/Jnt_Wing_4_R
         weight: 1
-      - path: root/spine1/spine2
-        weight: 1
-      - path: root/spine1/spine2/spine3
+      - path: Seagull
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}

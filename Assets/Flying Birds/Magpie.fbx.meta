@@ -1,0 +1,439 @@
+fileFormatVersion: 2
+guid: 0c79e4aef0fab5f45a60f766cd0a977d
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Geo_Feathers
+    100002: Geo_Magpie_Body
+    100004: Geo_Magpie_Tail
+    100006: Geo_Magpie_Wings
+    100008: Jnt_Arm_L
+    100010: Jnt_Arm_R
+    100012: Jnt_Beak
+    100014: Jnt_Elbow_L
+    100016: Jnt_Elbow_R
+    100018: Jnt_Femur_L
+    100020: Jnt_Femur_R
+    100022: Jnt_Fibula_L
+    100024: Jnt_Fibula_R
+    100026: Jnt_Finger_Back_L
+    100028: Jnt_Finger_Back_R
+    100030: Jnt_Finger_E_L
+    100032: Jnt_Finger_E_R
+    100034: Jnt_Finger_L
+    100036: Jnt_Finger_L 1
+    100038: Jnt_Finger_R
+    100040: Jnt_Finger_R 1
+    100042: Jnt_Foot_L
+    100044: Jnt_Foot_R
+    100046: Jnt_Head
+    100048: Jnt_Magpie_Root
+    100050: Jnt_Shoulder_L
+    100052: Jnt_Shoulder_R
+    100054: Jnt_Tail_E_L
+    100056: Jnt_Tail_E_R
+    100058: Jnt_Tail_L
+    100060: Jnt_Tail_M
+    100062: Jnt_Tail_R
+    100064: Jnt_Wings_Scl
+    100066: //RootNode
+    400000: Geo_Feathers
+    400002: Geo_Magpie_Body
+    400004: Geo_Magpie_Tail
+    400006: Geo_Magpie_Wings
+    400008: Jnt_Arm_L
+    400010: Jnt_Arm_R
+    400012: Jnt_Beak
+    400014: Jnt_Elbow_L
+    400016: Jnt_Elbow_R
+    400018: Jnt_Femur_L
+    400020: Jnt_Femur_R
+    400022: Jnt_Fibula_L
+    400024: Jnt_Fibula_R
+    400026: Jnt_Finger_Back_L
+    400028: Jnt_Finger_Back_R
+    400030: Jnt_Finger_E_L
+    400032: Jnt_Finger_E_R
+    400034: Jnt_Finger_L
+    400036: Jnt_Finger_L 1
+    400038: Jnt_Finger_R
+    400040: Jnt_Finger_R 1
+    400042: Jnt_Foot_L
+    400044: Jnt_Foot_R
+    400046: Jnt_Head
+    400048: Jnt_Magpie_Root
+    400050: Jnt_Shoulder_L
+    400052: Jnt_Shoulder_R
+    400054: Jnt_Tail_E_L
+    400056: Jnt_Tail_E_R
+    400058: Jnt_Tail_L
+    400060: Jnt_Tail_M
+    400062: Jnt_Tail_R
+    400064: Jnt_Wings_Scl
+    400066: //RootNode
+    2300000: Geo_Feathers
+    3300000: Geo_Feathers
+    4300000: Geo_Magpie_Body
+    4300002: Geo_Magpie_Wings
+    4300004: Geo_Magpie_Tail
+    4300006: Geo_Feathers
+    7400000: MagpieGround_ANIM
+    7400002: MagpieWingsBeat_ANIM
+    7400004: MagpieFly_ANIM
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Geo_Magpie_Body
+    13700002: Geo_Magpie_Tail
+    13700004: Geo_Magpie_Wings
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: MagpieGround_ANIM
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Geo_Feathers
+        weight: 1
+      - path: Geo_Magpie_Body
+        weight: 1
+      - path: Geo_Magpie_Tail
+        weight: 1
+      - path: Geo_Magpie_Wings
+        weight: 1
+      - path: Jnt_Magpie_Root
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_L/Jnt_Fibula_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_L/Jnt_Fibula_L/Jnt_Foot_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_L/Jnt_Fibula_L/Jnt_Foot_L/Jnt_Finger_Back_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_L/Jnt_Fibula_L/Jnt_Foot_L/Jnt_Finger_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_R/Jnt_Fibula_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_R/Jnt_Fibula_R/Jnt_Foot_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_R/Jnt_Fibula_R/Jnt_Foot_R/Jnt_Finger_Back_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_R/Jnt_Fibula_R/Jnt_Foot_R/Jnt_Finger_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Head
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Head/Jnt_Beak
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_L/Jnt_Arm_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_L/Jnt_Arm_L/Jnt_Elbow_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_L/Jnt_Arm_L/Jnt_Elbow_L/Jnt_Finger_L 1
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_L/Jnt_Arm_L/Jnt_Elbow_L/Jnt_Finger_L 1/Jnt_Finger_E_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_R/Jnt_Arm_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_R/Jnt_Arm_R/Jnt_Elbow_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_R/Jnt_Arm_R/Jnt_Elbow_R/Jnt_Finger_R 1
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_R/Jnt_Arm_R/Jnt_Elbow_R/Jnt_Finger_R 1/Jnt_Finger_E_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Tail_M
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Tail_M/Jnt_Tail_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Tail_M/Jnt_Tail_L/Jnt_Tail_E_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Tail_M/Jnt_Tail_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Tail_M/Jnt_Tail_R/Jnt_Tail_E_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Wings_Scl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: MagpieWingsBeat_ANIM
+      takeName: Take 001
+      firstFrame: 151
+      lastFrame: 175
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Geo_Feathers
+        weight: 1
+      - path: Geo_Magpie_Body
+        weight: 1
+      - path: Geo_Magpie_Tail
+        weight: 1
+      - path: Geo_Magpie_Wings
+        weight: 1
+      - path: Jnt_Magpie_Root
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_L/Jnt_Fibula_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_L/Jnt_Fibula_L/Jnt_Foot_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_L/Jnt_Fibula_L/Jnt_Foot_L/Jnt_Finger_Back_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_L/Jnt_Fibula_L/Jnt_Foot_L/Jnt_Finger_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_R/Jnt_Fibula_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_R/Jnt_Fibula_R/Jnt_Foot_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_R/Jnt_Fibula_R/Jnt_Foot_R/Jnt_Finger_Back_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_R/Jnt_Fibula_R/Jnt_Foot_R/Jnt_Finger_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Head
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Head/Jnt_Beak
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_L/Jnt_Arm_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_L/Jnt_Arm_L/Jnt_Elbow_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_L/Jnt_Arm_L/Jnt_Elbow_L/Jnt_Finger_L 1
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_L/Jnt_Arm_L/Jnt_Elbow_L/Jnt_Finger_L 1/Jnt_Finger_E_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_R/Jnt_Arm_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_R/Jnt_Arm_R/Jnt_Elbow_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_R/Jnt_Arm_R/Jnt_Elbow_R/Jnt_Finger_R 1
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_R/Jnt_Arm_R/Jnt_Elbow_R/Jnt_Finger_R 1/Jnt_Finger_E_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Tail_M
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Tail_M/Jnt_Tail_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Tail_M/Jnt_Tail_L/Jnt_Tail_E_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Tail_M/Jnt_Tail_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Tail_M/Jnt_Tail_R/Jnt_Tail_E_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Wings_Scl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: MagpieFly_ANIM
+      takeName: Take 001
+      firstFrame: 176
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Geo_Feathers
+        weight: 1
+      - path: Geo_Magpie_Body
+        weight: 1
+      - path: Geo_Magpie_Tail
+        weight: 1
+      - path: Geo_Magpie_Wings
+        weight: 1
+      - path: Jnt_Magpie_Root
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_L/Jnt_Fibula_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_L/Jnt_Fibula_L/Jnt_Foot_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_L/Jnt_Fibula_L/Jnt_Foot_L/Jnt_Finger_Back_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_L/Jnt_Fibula_L/Jnt_Foot_L/Jnt_Finger_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_R/Jnt_Fibula_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_R/Jnt_Fibula_R/Jnt_Foot_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_R/Jnt_Fibula_R/Jnt_Foot_R/Jnt_Finger_Back_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Femur_R/Jnt_Fibula_R/Jnt_Foot_R/Jnt_Finger_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Head
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Head/Jnt_Beak
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_L/Jnt_Arm_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_L/Jnt_Arm_L/Jnt_Elbow_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_L/Jnt_Arm_L/Jnt_Elbow_L/Jnt_Finger_L 1
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_L/Jnt_Arm_L/Jnt_Elbow_L/Jnt_Finger_L 1/Jnt_Finger_E_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_R/Jnt_Arm_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_R/Jnt_Arm_R/Jnt_Elbow_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_R/Jnt_Arm_R/Jnt_Elbow_R/Jnt_Finger_R 1
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Shoulder_R/Jnt_Arm_R/Jnt_Elbow_R/Jnt_Finger_R 1/Jnt_Finger_E_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Tail_M
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Tail_M/Jnt_Tail_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Tail_M/Jnt_Tail_L/Jnt_Tail_E_L
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Tail_M/Jnt_Tail_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Tail_M/Jnt_Tail_R/Jnt_Tail_E_R
+        weight: 1
+      - path: Jnt_Magpie_Root/Jnt_Wings_Scl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
