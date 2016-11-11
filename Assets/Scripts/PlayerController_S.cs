@@ -17,23 +17,23 @@ public class PlayerController_S : MonoBehaviour {
         speedX = Input.GetAxis("Horizontal") * Time.deltaTime * speedCX;
         speedY = Input.GetAxis("Vertical") * Time.deltaTime * speedCY;
         speedZ = Input.GetAxis("Pitch") * Time.deltaTime * speedCZ;
-        transform.Translate(speedX, 0, -speedZ);
+        transform.Translate(speedX, speedZ, 0);
         //Possibly enumerate the title? 
         if(Input.GetKeyDown(KeyCode.RightArrow))
         {
-            transform.Rotate(Vector3.up, -rollAngle);
+            transform.Rotate(Vector3.forward, -rollAngle);
         }
         else if(Input.GetKeyUp(KeyCode.RightArrow))
         {
-            transform.Rotate(Vector3.up, rollAngle);
+            transform.Rotate(Vector3.forward, rollAngle);
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            transform.Rotate(Vector3.up, rollAngle);
+            transform.Rotate(Vector3.forward, rollAngle);
         }
         else if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
-            transform.Rotate(Vector3.up, -rollAngle);
+            transform.Rotate(Vector3.forward, -rollAngle);
         }
         //Up/down
         if (Input.GetKeyDown(KeyCode.DownArrow))
