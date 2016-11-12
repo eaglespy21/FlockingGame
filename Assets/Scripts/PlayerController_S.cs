@@ -13,7 +13,7 @@ public class PlayerController_S : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        CharacterController controller = GetComponent<CharacterController>();
+        //CharacterController controller = GetComponent<CharacterController>();
         speedX = Input.GetAxis("Horizontal") * Time.deltaTime * speedCX;
         speedY = Input.GetAxis("Vertical") * Time.deltaTime * speedCY;
         speedZ = Input.GetAxis("Pitch") * Time.deltaTime * speedCZ;
@@ -58,6 +58,8 @@ public class PlayerController_S : MonoBehaviour {
             //print(GetComponent<Rigidbody>().velocity);
         }
         //transform.Translate(0, 0, speedY);
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, 5, 50), Mathf.Clamp(transform.position.y, 1, 42), transform.position.z);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, GameController.BL, GameController.BR),
+                                         Mathf.Clamp(transform.position.y, GameController.BG, GameController.BS),
+                                         transform.position.z); ;
 	}
 }
