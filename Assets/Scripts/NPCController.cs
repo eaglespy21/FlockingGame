@@ -17,7 +17,7 @@ public class NPCController : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            float x = transform.position.x, y = transform.position.y, z = transform.position.z;
+            float x = Player.transform.position.x, y = Player.transform.position.y, z = Player.transform.position.z;
             transform.position = new Vector3(
                             Random.Range(x - GameController.BoundingSizeX, x + GameController.BoundingSizeX),
                             Random.Range(y - GameController.BoundingSizeY, y + GameController.BoundingSizeY),
