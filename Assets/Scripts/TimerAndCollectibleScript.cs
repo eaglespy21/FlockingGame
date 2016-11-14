@@ -14,8 +14,7 @@ public class TimerAndCollectibleScript : MonoBehaviour {
 	public Text win;
 	public Button retry;
 	public Button playAgain;
-
-	private int lives = 3;
+	public int lives = 3;
 	private PlayerController_S pc_s;
 	private int isDead = 0;
 	private int isWin = 0;
