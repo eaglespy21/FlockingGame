@@ -30,7 +30,7 @@ public class EagleController : MonoBehaviour {
 		image_a.enabled = false;
 		image_w.enabled = false;
 		image_s.enabled = false;
-		image_a.enabled = false;
+		image_d.enabled = false;
 	}
 	// Update is called once per frame
 	void Update () {
@@ -61,8 +61,8 @@ public class EagleController : MonoBehaviour {
 			if (changeTime <= 0) {
 					changeTime = changeTimeValue;
 					tacs.lives--;
-					Destroy (gameObject);
 					ResetImage ();
+					Destroy (gameObject);
 					text = array [(int)Random.Range (0, 4)];
 					correct = false;
 					flag2 = false;
@@ -74,8 +74,8 @@ public class EagleController : MonoBehaviour {
 				 else {
 					tacs.lives--;
 				}
-				Destroy (gameObject);
 				ResetImage ();
+				Destroy (gameObject);
 			}
 			if (Input.GetKeyDown (KeyCode.W)) {
 				if (text == "w") {
@@ -84,8 +84,8 @@ public class EagleController : MonoBehaviour {
 				 else {
 					tacs.lives--;
 				}
-				Destroy (gameObject);
 				ResetImage ();
+				Destroy (gameObject);
 			}
 			if (Input.GetKeyDown (KeyCode.S)) {
 				if (text == "s") {
@@ -93,9 +93,8 @@ public class EagleController : MonoBehaviour {
 				} else {
 					tacs.lives--;
 				}
-				Destroy (gameObject);
 				ResetImage ();
-
+				Destroy (gameObject);
 			}
 			if (Input.GetKeyDown (KeyCode.D)) {
 				if (text == "d") {
@@ -103,8 +102,8 @@ public class EagleController : MonoBehaviour {
 				} else {
 					tacs.lives--;
 				}
-				Destroy (gameObject);
 				ResetImage ();
+				Destroy (gameObject);
 			}
 		}
 	}
