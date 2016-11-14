@@ -3,14 +3,28 @@ using System.Collections;
 
 public class NPCController : MonoBehaviour {
     public float mag = 1;
+    public Vector3 oldV;
     public int randValue;
+    public GameObject FlockSphere, Player;
 	// Use this for initialization
 	void Start () {
         GetComponent<Rigidbody>().velocity = Vector3.forward * Random.value * GameController.speedNPC;
+        FlockSphere = GameObject.Find("FlockSphere");
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 	
 	// Update is called once per frame
 	void Update () {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            float x = transform.position.x, y = transform.position.y, z = transform.position.z;
+            transform.position = new Vector3(
+                            Random.Range(x - GameController.BoundingSizeX, x + GameController.BoundingSizeX),
+                            Random.Range(y - GameController.BoundingSizeY, y + GameController.BoundingSizeY),
+                            Random.Range(z - GameController.BoundingSizeZ, z + GameController.BoundingSizeZ));
+            transform.parent = FlockSphere.transform;
+            GetComponent<Rigidbody>().velocity = Player.GetComponent<Rigidbody>().velocity;
+        }
 	
 	}
     void FixedUpdate()
