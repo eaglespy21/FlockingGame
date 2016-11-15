@@ -42,7 +42,7 @@ public class EagleController : MonoBehaviour {
 
 		} else if (distance <= 5) {
 			transform.position = player.transform.position - offset;
-
+			Time.timeScale = 0.5f;
 			changeTime -= Time.deltaTime * 1000;
 			switch (text) {
 			case  "a":
@@ -62,6 +62,7 @@ public class EagleController : MonoBehaviour {
 					changeTime = changeTimeValue;
 					tacs.lives--;
 					ResetImage ();
+					Time.timeScale = 1f;
 					Destroy (gameObject);
 					text = array [(int)Random.Range (0, 4)];
 					correct = false;
@@ -75,6 +76,7 @@ public class EagleController : MonoBehaviour {
 					tacs.lives--;
 				}
 				ResetImage ();
+				Time.timeScale = 1f;
 				Destroy (gameObject);
 			}
 			if (Input.GetKeyDown (KeyCode.W)) {
@@ -85,6 +87,7 @@ public class EagleController : MonoBehaviour {
 					tacs.lives--;
 				}
 				ResetImage ();
+				Time.timeScale = 1f;
 				Destroy (gameObject);
 			}
 			if (Input.GetKeyDown (KeyCode.S)) {
@@ -94,6 +97,7 @@ public class EagleController : MonoBehaviour {
 					tacs.lives--;
 				}
 				ResetImage ();
+				Time.timeScale = 1f;
 				Destroy (gameObject);
 			}
 			if (Input.GetKeyDown (KeyCode.D)) {
@@ -103,6 +107,7 @@ public class EagleController : MonoBehaviour {
 					tacs.lives--;
 				}
 				ResetImage ();
+				Time.timeScale = 1f;
 				Destroy (gameObject);
 			}
 		}
