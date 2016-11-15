@@ -21,6 +21,7 @@ public class TimerAndCollectibleScript : MonoBehaviour {
 	public float startWindZone=10, endWindZone=30;
 	public float health = 100;
 	public Slider HealthSlider;
+	public float damagePoints=3, damagePointsWindzone = 5;
 	// Use this for initialization
 	void Start () {
 		gameover.enabled = false;
@@ -58,10 +59,10 @@ public class TimerAndCollectibleScript : MonoBehaviour {
 			Dead ();
 		}
 		if (transform.position.z > startWindZone && transform.position.z < endWindZone) {
-			health = health - 1 * Time.deltaTime;
+			health = health - damagePoints * Time.deltaTime;
 			print ("Losing health");
 		}
-		health = health - 1 * Time.deltaTime;
+		health = health - damagePoints * Time.deltaTime;
 		HealthSlider.value = health;
 	
 	}
