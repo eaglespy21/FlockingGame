@@ -18,6 +18,9 @@ public class TimerAndCollectibleScript : MonoBehaviour {
 	private PlayerController_S pc_s;
 	private int isDead = 0;
 	private int isWin = 0;
+	public float startWindZone=10, endWindZone=30;
+	public float health = 100;
+	public Slider HealthSlider;
 	// Use this for initialization
 	void Start () {
 		gameover.enabled = false;
@@ -54,6 +57,13 @@ public class TimerAndCollectibleScript : MonoBehaviour {
 		if (lives <= 0 || timeLeft <= 0) {
 			Dead ();
 		}
+		if (transform.position.z > startWindZone && transform.position.z < endWindZone) {
+			health = health - 1 * Time.deltaTime;
+			print ("Losing health");
+		}
+		health = health - 1 * Time.deltaTime;
+		HealthSlider.value = health;
+	
 	}
 	/* void OnCollisionEnter(Collision col)
     {
@@ -81,7 +91,12 @@ public class TimerAndCollectibleScript : MonoBehaviour {
 			}
 			food++;
 			Destroy (col.gameObject);
-		} else if (col.CompareTag ("tree") || col.CompareTag ("house")) { //replace with tag harm which contains all objects that cause harm 
+		} /*else if (col.CompareTag ("Battery")) {
+			health = health + 10;
+			if (health > 100)
+				health = 100;
+		}*/
+		else if (col.CompareTag ("tree") || col.CompareTag ("house")) { //replace with tag harm which contains all objects that cause harm 
 			//print ("Found palm tree");
 			GetComponent<Respawn> ().respawnPlayerFunction ();
 			lives--;
