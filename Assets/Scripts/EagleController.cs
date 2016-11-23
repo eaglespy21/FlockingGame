@@ -7,6 +7,14 @@ public class EagleController : MonoBehaviour {
 	public bool flag1=false, flag2= false;
 	public int life;
 	public Image image_a,image_w,image_s,image_d;
+	public GameObject npc;
+	public GameObject npc2;
+	public GameObject npc3;
+	public GameObject npc4;
+	public GameObject npc5;
+	public GameObject npc6;
+	public GameObject npc7;
+	public GameObject npc8;
 
 	private float distance;
 	private Vector3 offset, temp_position;
@@ -69,8 +77,10 @@ public class EagleController : MonoBehaviour {
 					flag2 = false;
 			}
 			if (Input.GetKeyDown (KeyCode.A)) {
-				if (text == "a") {
+				if (text == "a" && npc.GetComponent<NPCController>().inFlock) {
 					correct = true;
+					//Shape as triangle
+
 				}
 				 else {
 					tacs.lives--;
@@ -80,8 +90,9 @@ public class EagleController : MonoBehaviour {
 				Destroy (gameObject);
 			}
 			if (Input.GetKeyDown (KeyCode.W)) {
-				if (text == "w") {
+				if (text == "w"&& npc.GetComponent<NPCController>().inFlock) {
 					correct = true;
+					//Shape as square
 				}
 				 else {
 					tacs.lives--;
@@ -91,8 +102,9 @@ public class EagleController : MonoBehaviour {
 				Destroy (gameObject);
 			}
 			if (Input.GetKeyDown (KeyCode.S)) {
-				if (text == "s") {
+				if (text == "s"&& npc.GetComponent<NPCController>().inFlock) {
 					correct = true;
+					//Shape as cross
 				} else {
 					tacs.lives--;
 				}
@@ -101,8 +113,9 @@ public class EagleController : MonoBehaviour {
 				Destroy (gameObject);
 			}
 			if (Input.GetKeyDown (KeyCode.D)) {
-				if (text == "d") {
+				if (text == "d"&& npc.GetComponent<NPCController>().inFlock) {
 					correct = true;
+					//Shape as circle
 				} else {
 					tacs.lives--;
 				}

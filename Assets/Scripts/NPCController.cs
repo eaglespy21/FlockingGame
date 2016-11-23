@@ -6,6 +6,7 @@ public class NPCController : MonoBehaviour {
     public int randValue;
     public GameObject FlockSphere, Player;
     public bool toggle = true;
+	public bool inFlock = false;
 	// Use this for initialization
 	void Start () {
         GetComponent<Rigidbody>().velocity = Vector3.forward * Random.value * GameController.speedNPC;
@@ -15,8 +16,14 @@ public class NPCController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Debug.Log (inFlock);
         if (Input.GetKeyDown(KeyCode.F))
         {
+			if (inFlock == true) {
+				inFlock = false;
+			} else {
+				inFlock = true;
+			}
             float x = Player.transform.position.x, y = Player.transform.position.y, z = Player.transform.position.z;
             if (toggle)
             {
