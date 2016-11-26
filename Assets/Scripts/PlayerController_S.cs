@@ -5,8 +5,10 @@ public class PlayerController_S : MonoBehaviour {
     public float speedCX = 1, speedCY = 1, speedCZ = 1;
     public float speedX, speedY, speedZ, rollAngle=10, leanAngle=10;
     public Vector3 moveDirection = Vector3.zero;
+    public GameController gameController;
 	// Use this for initialization
 	void Start () {
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
         GetComponent<Rigidbody>().velocity = Vector3.forward * speedCY;
 
     }
@@ -60,8 +62,8 @@ public class PlayerController_S : MonoBehaviour {
             //print(GetComponent<Rigidbody>().velocity);
         }
         //transform.Translate(0, 0, speedY);
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, GameController.BL, GameController.BR),
-                                         Mathf.Clamp(transform.position.y, GameController.BG, GameController.BS),
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, gameController.BL, gameController.BR),
+                                         Mathf.Clamp(transform.position.y, gameController.BG, gameController.BS),
                                          transform.position.z);
 	}
 }

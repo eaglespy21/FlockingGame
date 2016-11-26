@@ -42,6 +42,7 @@ public class EagleController : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
+        //print(npc.GetComponent<NPCController>().inFlock);
 		distance = Vector3.Distance (player.transform.position, transform.position);
 		transform.LookAt (player.transform.position);
 		if (distance < 40 && distance > 5) {
