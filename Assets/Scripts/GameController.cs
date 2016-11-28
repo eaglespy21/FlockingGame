@@ -4,9 +4,12 @@ using System.Collections;
 public class GameController : MonoBehaviour {
     private static GameController v_instance = null;
 	public float BL = 5, BR = 50, BG = 1, BS = 7, speedNPC = 5, mag = 5;
-    public float BoundingSizeX=2, BoundingSizeY=1, BoundingSizeZ=2;
-    public float BoundingDSizeX = 10, BoundingDSizeY = 10, BoundingDSizeZ = 10;
+    public float BoundingSizeX=2, BoundingSizeY=1, BoundingSizeZ=2;             //Flock boundaries 
+    public float BoundingDSizeX = 10, BoundingDSizeY = 10, BoundingDSizeZ = 10; //Dispersed flock boundaries
     public int numOfNPC = 8, countNPC=0;
+    public float[,] shapePositions = new float[8,2];
+    public float[,] trianglePositions = new float[6, 2];
+    public float zBuffer = 3;
 
     public static GameController instance
     {
@@ -31,8 +34,31 @@ public class GameController : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-	
-	}
+        //LeftLine
+        shapePositions[0, 0] = -BoundingSizeX; shapePositions[0, 1] = -BoundingSizeY;
+        shapePositions[1, 0] = -BoundingSizeX; shapePositions[1, 1] = 0;
+        shapePositions[2, 0] = -BoundingSizeX; shapePositions[2, 1] = BoundingSizeY;
+        //UpperLine
+        shapePositions[3, 0] = 0;              shapePositions[3, 1] = BoundingSizeY;
+        shapePositions[4, 0] = BoundingSizeX;  shapePositions[4, 1] = BoundingSizeY;
+        //RightLine
+        shapePositions[5, 0] = BoundingSizeX; shapePositions[5, 1] = 0;
+        shapePositions[6, 0] = BoundingSizeX; shapePositions[6, 1] = -BoundingSizeY;
+        //BottomLine
+        shapePositions[7, 0] = 0; shapePositions[7, 1] = -BoundingSizeY;
+
+        //triangle vertices
+        trianglePositions[0, 0] = -BoundingSizeX; trianglePositions[0, 1] = -BoundingSizeY;
+        trianglePositions[1, 0] = 0;              trianglePositions[1, 1] = BoundingSizeY;
+        trianglePositions[2, 0] = BoundingSizeX; trianglePositions[2, 1] = -BoundingSizeY;
+        //triangle midpoints
+        trianglePositions[3, 0] = (trianglePositions[0, 0] + trianglePositions[1, 0]) / 2;
+        trianglePositions[3, 1] = (trianglePositions[0, 1] + trianglePositions[1, 1]) / 2;
+        trianglePositions[4, 0] = (trianglePositions[1, 0] + trianglePositions[2, 0]) / 2;
+        trianglePositions[4, 1] = (trianglePositions[2, 1] + trianglePositions[2, 1]) / 2;
+        trianglePositions[5, 0] = (trianglePositions[0, 0] + trianglePositions[2, 0]) / 2;
+        trianglePositions[5, 1] = (trianglePositions[0, 1] + trianglePositions[2, 1]) / 2;
+    }
 	
 	// Update is called once per frame
 	void Update () {

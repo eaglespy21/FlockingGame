@@ -4,22 +4,21 @@ using System.Collections;
 public class NPCController : MonoBehaviour {
     public Vector3 oldV;
     public int randValue;
-    public GameObject FlockSphere, Player;
+    public GameObject Player;
     public bool toggle = true;
-	public bool inFlock = false;
+    public bool inFlock = false;
     public GameController gameController;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start() {
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
         GetComponent<Rigidbody>().velocity = Vector3.forward * Random.value * gameController.speedNPC;
-        FlockSphere = GameObject.Find("FlockSphere");
         Player = GameObject.FindGameObjectWithTag("Player");
     }
-	
-	// Update is called once per frame
-	void Update () {
-		//Debug.Log (inFlock);
-        if (Input.GetKeyDown(KeyCode.F))
+
+    // Update is called once per frame
+    void Update() {
+        //Debug.Log (inFlock);
+        if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A))
         {
 			if (inFlock == true) {
 				inFlock = false;
@@ -29,26 +28,54 @@ public class NPCController : MonoBehaviour {
             float x = Player.transform.position.x, y = Player.transform.position.y, z = Player.transform.position.z;
             if (toggle)
             {
+                /*
                  //Old logic
                 transform.position = new Vector3(
                                 Random.Range(x - gameController.BoundingSizeX, x + gameController.BoundingSizeX),
                                 Random.Range(y - gameController.BoundingSizeY, y + gameController.BoundingSizeY),
                                 Random.Range(z - gameController.BoundingSizeZ, z + gameController.BoundingSizeZ));
-                //transform.parent = Player.transform;
                 //GetComponent<Rigidbody>().velocity = Vector3.zero;
-                /* New logic
-                Vector3 center = Player.transform.position;
-                double i = (gameController.countNPC * 1.0) / gameController.numOfNPC;
-                double angle = i * Mathf.PI * 2;
-                double xPos = Mathf.Sin((float)angle) * gameController.BoundingSizeX;
-                double yPos = Mathf.Cos((float)angle) * gameController.BoundingSizeY;
-                transform.position = new Vector3((float)xPos, (float)yPos, Player.transform.position.z);
-                gameController.countNPC++;
-                print(gameController.countNPC);
                 */
+                //New logic, this could be more efficient and succint if it were in a class or an enumeration
+                Vector3 center = Player.transform.position;
+                Vector3 newPosition;
+                if(Input.GetKeyDown(KeyCode.S)){
+                    newPosition = new Vector3(gameController.shapePositions[gameController.countNPC, 0],
+                                               gameController.shapePositions[gameController.countNPC, 1],
+                                               0);
+                }
+                else if (Input.GetKeyDown(KeyCode.A))
+                {
+                    if(gameController.countNPC < 6)
+                    {
+                        newPosition = new Vector3(gameController.trianglePositions[gameController.countNPC, 0],
+                                               gameController.trianglePositions[gameController.countNPC, 1],
+                                               0);
+                    }
+                    else
+                    {
+                        newPosition = new Vector3(
+                                Random.Range(x - gameController.BoundingDSizeX, x + gameController.BoundingDSizeX),
+                                Random.Range(y - gameController.BoundingDSizeY, y + gameController.BoundingDSizeY),
+                                Random.Range(z - gameController.BoundingDSizeZ, z + gameController.BoundingDSizeZ));
+                    }
+                    
+                }
+                else
+                {
+                    double i = (gameController.countNPC * 1.0) / gameController.numOfNPC;
+                    double angle = i * Mathf.PI * 2;
+                    double xPos = Mathf.Sin((float)angle) * gameController.BoundingSizeX;
+                    double yPos = Mathf.Cos((float)angle) * gameController.BoundingSizeY;
+                    newPosition = new Vector3((float)xPos, (float)yPos, 0);
+                } 
+                transform.position = center + newPosition;
+                gameController.countNPC++;
+                //print(gameController.countNPC);
                 GetComponent<Rigidbody>().velocity = Player.GetComponent<Rigidbody>().velocity;
+                //transform.parent = Player.transform;
             }
-            else
+            else if(!toggle)
             {
                 gameController.countNPC = 0;
                 transform.position = new Vector3(
@@ -66,7 +93,7 @@ public class NPCController : MonoBehaviour {
     void FixedUpdate()
     {
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
-
+        /*
         if (Physics.Raycast(transform.position, fwd, 7))
         {
             randValue = (int)(Random.value * 100);
@@ -81,7 +108,7 @@ public class NPCController : MonoBehaviour {
             }
             
         }
-        
+        */
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, gameController.BL, gameController.BR), 
                                          Mathf.Clamp(transform.position.y, gameController.BG, gameController.BS), 
                                          transform.position.z);

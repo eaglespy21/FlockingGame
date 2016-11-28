@@ -17,7 +17,7 @@ public class PlayerController_S : MonoBehaviour {
 	void Update () {
         //CharacterController controller = GetComponent<CharacterController>();
         speedX = Input.GetAxis("Horizontal") * Time.deltaTime * speedCX;
-        speedY = Input.GetAxis("Vertical") * Time.deltaTime * speedCY;
+        //speedY = Input.GetAxis("Vertical") * Time.deltaTime * speedCY;
         speedZ = Input.GetAxis("Pitch") * Time.deltaTime * speedCZ;
         transform.Translate(speedX, speedZ, 0);
         //Possibly enumerate the title? 

@@ -3,4 +3,7 @@ Flocking - http://wiki.unity3d.com/index.php?title=Flocking
 //Third person Camera - http://wiki.unity3d.com/index.php/SmoothLookAt_CS
 Third person Camera - Unity Standard Assets Third Person Camera
 Timer countdown - http://answers.unity3d.com/questions/225213/c-countdown-timer.html
+Singleton implementation - http://wiki.unity3d.com/index.php/AManagerClass
+Implementation of circle formation - http://answers.unity3d.com/questions/28215/instantiate-prefabs-in-a-circle-or-elipsoid.html
+
 
