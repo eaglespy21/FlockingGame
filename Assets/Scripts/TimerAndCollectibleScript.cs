@@ -105,11 +105,14 @@ public class TimerAndCollectibleScript : MonoBehaviour {
             Destroy(col.gameObject);
 			particle = Instantiate (CollectParticle, col.transform.position, col.transform.rotation) as GameObject;
 			Destroy (particle, 3);
-        } /*else if (col.CompareTag ("Battery")) {
+        } else if (col.CompareTag ("Battery")) {
 			health = health + 10;
 			if (health > 100)
 				health = 100;
-		}*/
+			Destroy (col.gameObject);
+			particle = Instantiate (CollectParticle, col.transform.position, col.transform.rotation) as GameObject;
+			Destroy (particle, 3);
+		}
         else if (col.CompareTag("tree") || col.CompareTag("house")) { //replace with tag harm which contains all objects that cause harm 
 			Debug.Log("Tree");                                //print ("Found palm tree");
             GetComponent<Respawn>().respawnPlayerFunction();
