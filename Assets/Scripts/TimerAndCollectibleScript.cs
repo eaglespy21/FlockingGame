@@ -9,15 +9,18 @@ public class TimerAndCollectibleScript : MonoBehaviour {
 	public Image heart1;
 	public Image heart2;
 	public Image heart3;
+	public Image WindWheel;
 	public Text time;
 	public Text gameover;
 	public Text win;
 	public Button retry;
 	public Button playAgain;
 	public int lives = 3;
+	public GameObject CollectParticle, WrongParticle;
 	private PlayerController_S pc_s;
 	private int isDead = 0;
 	private int isWin = 0;
+	private GameObject particle;
 	public float startWindZone=10, endWindZone=30;
 	public float health = 100;
 	public Slider HealthSlider;
@@ -60,6 +63,7 @@ public class TimerAndCollectibleScript : MonoBehaviour {
 		}
 		if (transform.position.z > startWindZone && transform.position.z < endWindZone) {
 			health = health - damagePoints * Time.deltaTime;
+			WindWheel.GetComponent<RectTransform>().Rotate (new Vector3(0,0,-270)* Time.deltaTime);
 			//print ("Losing health");
 		}
 		health = health - damagePoints * Time.deltaTime;
@@ -99,17 +103,21 @@ public class TimerAndCollectibleScript : MonoBehaviour {
             }
             food++;
             Destroy(col.gameObject);
+			particle = Instantiate (CollectParticle, col.transform.position, col.transform.rotation) as GameObject;
+			Destroy (particle, 3);
         } /*else if (col.CompareTag ("Battery")) {
 			health = health + 10;
 			if (health > 100)
 				health = 100;
 		}*/
         else if (col.CompareTag("tree") || col.CompareTag("house")) { //replace with tag harm which contains all objects that cause harm 
-                                                                      //print ("Found palm tree");
+			Debug.Log("Tree");                                //print ("Found palm tree");
             GetComponent<Respawn>().respawnPlayerFunction();
             lives--;
+			Instantiate (WrongParticle, transform.position, transform.rotation);
 		}
         else if (col.CompareTag ("End")) {
+			Debug.Log ("End");
 			Win ();
 		}
 	}
