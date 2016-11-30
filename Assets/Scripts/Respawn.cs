@@ -24,11 +24,14 @@ public class Respawn : MonoBehaviour {
         //print("RespawnFunction called");
         for (int i = 0; i < SpawnPoints.Length; i++)
         {
-            Vector3 dist = transform.position - SpawnPoints[i].transform.position;
-            if (dist.magnitude < closestVec.magnitude)
+            if (SpawnPoints[i].transform.position.z < transform.position.z) //Only consider previous spawnPoints
             {
-                closestVec = dist;
-                ClosestSpawnPoint = SpawnPoints[i];
+                Vector3 dist = transform.position - SpawnPoints[i].transform.position;
+                if (dist.magnitude < closestVec.magnitude)
+                {
+                    closestVec = dist;
+                    ClosestSpawnPoint = SpawnPoints[i];
+                }
             }
         }
         Player.transform.position = ClosestSpawnPoint.transform.position;

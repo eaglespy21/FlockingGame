@@ -1,16 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
     private static GameController v_instance = null;
-	public float BL = 5, BR = 50, BG = 1, BS = 7, speedNPC = 5, mag = 5;
+	public float BL = 5, BR = 40, BG = 1, BS = 7, speedNPC = 5, mag = 5;
     public float BoundingSizeX=2, BoundingSizeY=1, BoundingSizeZ=2;             //Flock boundaries 
     public float BoundingDSizeX = 10, BoundingDSizeY = 10, BoundingDSizeZ = 10; //Dispersed flock boundaries
     public int numOfNPC = 8, countNPC=0;
     public float[,] shapePositions = new float[8,2];
     public float[,] trianglePositions = new float[6, 2];
     public float zBuffer = 3;
-
+    public bool inFlock = false;
+    public float BatteryPoint = 20;
+	public float invincible = 0;
+    public float score=0;
+    public Text HintDisplay;
+    public int sec = 2;
+    public string hintS;
     public static GameController instance
     {
         get
@@ -62,6 +69,27 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+		invincible -= Time.deltaTime;
+        if(hintS == "Windzone")
+        {
+            StartCoroutine(HintDisplayEnumerator("Windzone ahead, call your flock!"));
+            hintS = "";
+        }
+        else if(hintS == "House")
+        {
+            StartCoroutine(HintDisplayEnumerator("Houses ahead, disperse your flock!"));
+            hintS = "";
+        }
+        else if(hintS == "Tree")
+        {
+            StartCoroutine(HintDisplayEnumerator("Forest ahead, disperse your flock!"));
+            hintS = "";
+        }
+    }
+    public IEnumerator HintDisplayEnumerator(string s)
+    {
+        HintDisplay.text = s;
+        yield return new WaitForSeconds(sec);
+        HintDisplay.text = "";
+    }
 }

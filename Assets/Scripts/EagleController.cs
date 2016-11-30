@@ -7,7 +7,7 @@ public class EagleController : MonoBehaviour {
 	public bool flag1=false, flag2= false;
 	public int life;
 	public Image image_a,image_w,image_s,image_d;
-	public Text FlockHint;
+	public Text LetterNameL, LetterNameR;
 	public GameObject npc;
 	public GameObject npc2;
 	public GameObject npc3;
@@ -23,10 +23,11 @@ public class EagleController : MonoBehaviour {
 	private string text;
 	private TimerAndCollectibleScript tacs;
 	bool correct = false;
+    public GameController gameController;
 	// Use this for initialization
 	void Start () {
-		FlockHint.enabled = false;
-		changeTime = changeTimeValue;
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        changeTime = changeTimeValue;
 		player = GameObject.FindGameObjectWithTag ("Player");
 		text = array [(int)Random.Range (0, 4)];
 		image_a.enabled = false;
@@ -37,7 +38,9 @@ public class EagleController : MonoBehaviour {
 	}
 
 	void ResetImage(){
-		image_a.enabled = false;
+        LetterNameL.enabled = false;
+        LetterNameR.enabled = false;
+        image_a.enabled = false;
 		image_w.enabled = false;
 		image_s.enabled = false;
 		image_d.enabled = false;
@@ -50,24 +53,28 @@ public class EagleController : MonoBehaviour {
 		if (distance < 40 && distance > 5) {
 			transform.position = Vector3.MoveTowards (transform.position, player.transform.position, 10 * Time.deltaTime);
 			offset = player.transform.position - transform.position;
-			FlockHint.enabled = true;
+            LetterNameR.enabled = false; LetterNameL.enabled = false;
 		} else if (distance <= 5) {
-			FlockHint.enabled = false;
+            LetterNameR.enabled = true; LetterNameL.enabled = true;
 			transform.position = player.transform.position - offset;
 			Time.timeScale = 0.5f;
 			changeTime -= Time.deltaTime * 1000;
 			switch (text) {
 			case  "a":
+                    LetterNameL.text = LetterNameR.text = "A"; 
 				image_a.enabled = true;
 				break;
 			case "w":
-				image_w.enabled = true;
+                    LetterNameL.text = LetterNameR.text = "W";
+                    image_w.enabled = true;
 				break;
 			case "s":
-				image_s.enabled = true;
+                    LetterNameL.text = LetterNameR.text = "S";
+                    image_s.enabled = true;
 				break;
 			case "d":
-				image_d.enabled = true;
+                    LetterNameL.text = LetterNameR.text = "D";
+                    image_d.enabled = true;
 				break;
 			}
 			if (changeTime <= 0) {
@@ -81,9 +88,11 @@ public class EagleController : MonoBehaviour {
 					text = array [(int)Random.Range (0, 4)];
 					correct = false;
 					flag2 = false;
-			}
+                    LetterNameL.enabled = false;
+                    LetterNameR.enabled = false;
+            }
 			if (Input.GetKeyDown (KeyCode.A)) {
-				if (text == "a" && npc.GetComponent<NPCController>().inFlock) {
+				if (text == "a") {// && npc.GetComponent<NPCController>().inFlock) {
 					correct = true;
 					particle = Instantiate (CorrectParticle, transform.position, transform.rotation)as GameObject;
 					Destroy (particle, 3);
@@ -100,7 +109,7 @@ public class EagleController : MonoBehaviour {
 				Destroy (gameObject);
 			}
 			if (Input.GetKeyDown (KeyCode.W)) {
-				if (text == "w"&& npc.GetComponent<NPCController>().inFlock) {
+				if (text == "w") {//&& npc.GetComponent<NPCController>().inFlock) {
 					correct = true;
 					particle = Instantiate (CorrectParticle, transform.position, transform.rotation) as GameObject;
 					Destroy (particle, 3);
@@ -116,7 +125,7 @@ public class EagleController : MonoBehaviour {
 				Destroy (gameObject);
 			}
 			if (Input.GetKeyDown (KeyCode.S)) {
-				if (text == "s"&& npc.GetComponent<NPCController>().inFlock) {
+				if (text == "s") {//&& npc.GetComponent<NPCController>().inFlock) {
 					correct = true;
 					particle = Instantiate (CorrectParticle, transform.position, transform.rotation)as GameObject;
 					Destroy (particle, 3);
@@ -131,7 +140,7 @@ public class EagleController : MonoBehaviour {
 				Destroy (gameObject);
 			}
 			if (Input.GetKeyDown (KeyCode.D)) {
-				if (text == "d"&& npc.GetComponent<NPCController>().inFlock) {
+				if (text == "d") {//&& npc.GetComponent<NPCController>().inFlock) {
 					correct = true;
 					particle = Instantiate (CorrectParticle, transform.position, transform.rotation)as GameObject;
 					Destroy (particle, 3);
@@ -146,5 +155,25 @@ public class EagleController : MonoBehaviour {
 				Destroy (gameObject);
 			}
 		}
+        else
+        {
+            //LetterNameR.enabled = false; LetterNameL.enabled = false;
+        }
 	}
+    void OnDestroy()
+    {
+        //print("Script was destroyed");
+        if(gameObject.name == "Eagle_Windzone")
+        {
+            gameController.hintS = "Windzone";
+        }
+        else if(gameObject.name == "Eagle_House")
+        {
+            gameController.hintS = "House";
+        }
+        else
+        {
+            gameController.hintS = "Tree";
+        }
+    }
 }

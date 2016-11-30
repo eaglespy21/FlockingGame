@@ -19,9 +19,10 @@ public class PlayerController_S : MonoBehaviour {
         speedX = Input.GetAxis("Horizontal") * Time.deltaTime * speedCX;
         //speedY = Input.GetAxis("Vertical") * Time.deltaTime * speedCY;
         speedZ = Input.GetAxis("Pitch") * Time.deltaTime * speedCZ;
-        transform.Translate(speedX, speedZ, 0);
+        //transform.Translate(speedX, speedZ, 0);
+        transform.Translate(speedX, speedZ, 0, Space.World);
         //Possibly enumerate the title? 
-        /*
+        
         if(Input.GetKeyDown(KeyCode.RightArrow))
         {
             transform.Rotate(Vector3.forward, -rollAngle);
@@ -55,7 +56,7 @@ public class PlayerController_S : MonoBehaviour {
         {
             transform.Rotate(Vector3.right, leanAngle);
         }
-        */
+        
         if (Input.GetKeyDown(KeyCode.G))
         {
             GetComponent<Rigidbody>().velocity = Vector3.forward * speedCY;
